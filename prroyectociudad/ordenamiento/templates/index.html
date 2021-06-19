@@ -5,13 +5,13 @@
  {% for e in parroquias %}
 
   <li>
-    Parroquia: {{e}} 🔍️[<a href="{% url 'obtener_parroquia' e.id %}">ver</a>] - 
-    🔨[<a href="{% url 'editar_parroquia' e.id %}">editar</a>] -  
+    Parroquia: {{e}} [<a href="{% url 'obtener_parroquia' e.id %}">ver 🔍️</a>] - 
+    [<a href="{% url 'editar_parroquia' e.id %}">editar 🔨</a>] 
       <ul>
         {% for t in e.lasparroquias.all %}
           <li>
             <span>
-              Barrio: {{t.nombre}} - 🔨[<a href="{% url 'editar_barrio' t.id %}">editar</a>] 
+              Barrio: {{t.nombre}}   - [<a href="{% url 'editar_barrio' t.id %}">editar 🔨</a>] 
             </span>
           </li>
         {% endfor %} 
